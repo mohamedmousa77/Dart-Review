@@ -115,6 +115,36 @@ void main(){
   // Here we can extract all date with specific data type from list containing mutable data with different data types:
   list.whereType<String>();
 
+  // Reduce method is used to obtain values in list looping on them. Reduce method will return a value not a list is used mainly to obtain the performance instead of for loop
+  List<int> list = [10,20,30,60];
+  int sumOfReducedValue = list.reduce((value, nextValue){
+    return value + nextValue;
+  });
+  print(sumOfReducedValue); // 160
+
+  //Fold method, the same of Reduce but will return any type of value not only of list element's value. Using Fold method is required to set an initial value.
+  int sumOfFoldValues = list.fold(5 , (int ? value, int nextValue){
+    return value! + nextValue;
+  });
+  print (sumOfFoldValues);
+
+  // toSet(), asMap(), toList().
+  List myList = list.toList();
+  print(myList);  // [10, 20, 30, 60]
+  Set mySet = list.toSet();
+  print(mySet); //{10, 20, 30, 60}
+  Map myMap = list.asMap();
+  print(myMap);// {0: 10, 1: 20, 2: 30, 3: 60}
+
+  // Every() Vs Any():
+  // Every: all element in list Vs Any: only one element on list. Typically as OR Vs AND in conditions
+  List<String> fruits = ['orange', 'Limno', 'Banana', ];
+
+  bool myCondition = fruits.any/every((value){
+    return value.contains('n');
+  });
+  print ('myCondition = $myCondition');
+
   void main() {
     var items = List.generate(5, (int index) => index * index);
   }
