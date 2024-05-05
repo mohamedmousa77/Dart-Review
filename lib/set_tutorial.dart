@@ -30,3 +30,7 @@ Set set01 = {10, 20, 40, 'mark', 'Sameh'};
 // Its possible to use union() nr order to create one Set from two lists deleting the duplicated elements.
 // Its possible to use intersection() in order to search for common elements between two lists.
 // Its possible to use difference() to identify the values in first one not exist in second list. Ex. Set list03 = list1.difference(list2);
+
+// Sort Set in Dat:
+// Its possible to use toList() then sort.
+// Its possible to use SplayTreeSet instead of Set. Ex. SplayTreeSet sortedNames = SplayTreeSet.from(names).
