@@ -52,3 +52,5 @@ employee.addAll(person);
 // if(key == 'age'){return  value ++}
 // if(key == 'salary'){return value+199}
 // }
+
+// Cascade consecutive method invocations on the same reference.
